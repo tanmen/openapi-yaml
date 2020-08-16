@@ -1,4 +1,7 @@
-import {fetch} from "./fetch";
+import {combine} from "./combine";
+import {read} from "./read";
+import { dirname } from "path";
 
 export const yamler = (path: string = process.cwd()) =>
-  fetch(path)
+  read(path)
+    .then(file => combine(file, {path: dirname(path)}))
