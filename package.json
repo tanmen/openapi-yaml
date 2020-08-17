@@ -1,9 +1,14 @@
 {
   "name": "openapi-yaml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "type": "dist/index.d.ts",
-  "keywords": ["openapi", "yaml", "split", "merge"],
+  "keywords": [
+    "openapi",
+    "yaml",
+    "split",
+    "merge"
+  ],
   "license": "MIT",
   "bin": {
     "openapi-yaml": "dist/cli.js"
