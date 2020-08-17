@@ -16,7 +16,8 @@ const inject = (obj: any, {path, data}: File) =>
 
 const convertPathToProperty = (path: string) =>
   path.replace(extname(path), '')
-    .replace('@', '/').split(sep);
+    .split(sep)
+    .map(p => p.replace('@', '/'));
 
 const incrementPath = (data: any, path: string): any => {
   if (typeof data !== 'object') return data;
