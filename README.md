@@ -1,6 +1,6 @@
-# Yammy
+# openapi-yaml
 
-This library is a library used to manage yaml split.
+This library manages a split openapi yaml file.
 
 ## Extended syntax
 This library uses `$dir` to manage split yaml files.
@@ -33,7 +33,7 @@ example: Example
 
 ## Cli options
 ```shell script
-yammy <yaml> [options]
+openapi-yaml <yaml> [options]
 ```
 `command`
 
@@ -53,20 +53,21 @@ yammy <yaml> [options]
 #### install
 `yarn`
 ```shell script
-yarn add -D yammy
+yarn add -D openapi-yaml
 ```
 `npm`
 ```shell script
-npm install -D yammy
+npm install -D openapi-yaml
 ```
 
 #### usage
 `cli`
 ```shell script
-yammy ./main.yml -o ./merged.yml  
+openapi-yaml ./main.yml -o ./merged.yml  
 ```
 
 ### docker
+
 
 ## Issue
 If you find a problem, please report it on Issue, and we will fix it.

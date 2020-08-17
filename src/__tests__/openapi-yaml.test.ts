@@ -1,10 +1,10 @@
 import {join} from "path";
-import {yammy} from "../yammy";
+import {openapiYaml} from "../openapi-yaml";
 
 describe('yamler', () => {
   it('should extract yaml', () => {
     const path = join(__dirname, 'dummy', 'main.yml');
-    return expect(yammy(path))
+    return expect(openapiYaml(path))
       .resolves
       .toEqual({
         test: {
