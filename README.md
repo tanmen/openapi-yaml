@@ -67,7 +67,9 @@ openapi-yaml ./main.yml -o ./merged.yml
 ```
 
 ### docker
-
+```shell script
+docker run -v $(pwd):/home tanmen/openapi-yaml:v1.0.1 ./main.yml -o ./merged.yml  
+```
 
 ## Issue
 If you find a problem, please report it on Issue, and we will fix it.
