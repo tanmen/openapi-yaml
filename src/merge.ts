@@ -19,7 +19,8 @@ const convertPathToProperty = (path: string) =>
 
 const incrementPath = (data: any, path: string): any => {
   if (typeof data !== 'object') return data;
-  if (data.hasOwnProperty('$dir')) {
+  else if (Array.isArray(data)) return data.map(d => incrementPath(d, path))
+  else if (data.hasOwnProperty('$dir')) {
     const d = {...data};
     delete d.$dir
     return {
