@@ -1,0 +1,5 @@
+coverage
+Dockerfile
+jest.config.js
+**/__tests__/**
+.idea

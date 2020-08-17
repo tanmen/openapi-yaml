@@ -4,7 +4,7 @@ import {merge} from "./merge";
 
 export const combine = async (yml: any, option: { path: string }): Promise<any> => {
   if (typeof yml !== 'object') return yml;
-  else if (Array.isArray(yml)) return yml.map(y => combine(y, option))
+  else if (Array.isArray(yml)) return Promise.all(yml.map(y => combine(y, option)))
   return shape(yml, option)
 }
 
