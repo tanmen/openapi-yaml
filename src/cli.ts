@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import commandLineArgs, {CommandLineOptions} from 'command-line-args';
 import {openapiYaml} from "./openapi-yaml";
 import {writeFile} from "fs/promises";
