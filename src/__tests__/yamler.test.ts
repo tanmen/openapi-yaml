@@ -1,10 +1,10 @@
 import {join} from "path";
-import {yamler} from "../yamler";
+import {yammy} from "../yammy";
 
 describe('yamler', () => {
   it('should extract yaml', () => {
     const path = join(__dirname, 'dummy', 'main.yml');
-    return expect(yamler(path))
+    return expect(yammy(path))
       .resolves
       .toEqual({
         test: {

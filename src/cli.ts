@@ -1,13 +1,13 @@
 import commandLineArgs, {CommandLineOptions} from 'command-line-args';
-import {yamler} from "./yamler";
+import {yammy} from "./yammy";
 import {writeFile} from "fs/promises";
 
 const optionDefinitions = [
-  {name: 'yaml', alias: 'y', type: String},
-  {name: 'writeFile', alias: 'w', type: String}
+  {name: 'yaml', defaultOption: true},
+  {name: 'output', alias: 'o', type: String}
 ]
 
-const options = commandLineArgs(optionDefinitions) as CommandLineOptions & { writeFile: string; yaml: string };
+const options = commandLineArgs(optionDefinitions) as CommandLineOptions & { output: string; yaml: string };
 
-yamler(options.yaml)
-  .then(yml => writeFile(options.writeFile, yml))
+yammy(options.yaml)
+  .then(yml => writeFile(options.output, yml))

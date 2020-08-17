@@ -1,11 +1,11 @@
 {
-  "name": "yamler",
+  "name": "yammy",
   "version": "1.0.0",
   "main": "dist/index.js",
   "type": "dist/index.d.ts",
   "license": "MIT",
   "bin": {
-    "yamler": "dist/cli.js"
+    "yammy": "dist/cli.js"
   },
   "scripts": {
     "test": "jest",
