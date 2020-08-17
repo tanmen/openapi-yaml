@@ -30,6 +30,33 @@ example: Example
 }
 ```
 
+### Special notation
+
+`@` Is used as a special character in this library.
+
+`file structure`
+- A
+    - @B
+        - C.yml
+
+`C.yml`
+```yaml
+example: Example
+```
+
+`output $dir`
+```javascript
+{
+  A: {
+    '/B': {
+      C: {
+        example: 'Example'
+      }  
+    }  
+  }
+}
+```
+
 
 ## Cli options
 ```shell script
