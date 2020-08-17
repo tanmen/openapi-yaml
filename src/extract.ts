@@ -1,7 +1,7 @@
 import {readFile} from "fs/promises";
 import {glob} from "glob";
 import {safeLoad} from "js-yaml";
-import {join, resolve} from "path";
+import {join} from "path";
 import {File} from "./types";
 
 export const extract = (path: string): Promise<File[]> =>
