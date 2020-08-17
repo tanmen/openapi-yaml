@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "type": "dist/index.d.ts",
+  "keywords": ["openapi", "yaml", "split", "merge"],
   "license": "MIT",
   "bin": {
     "openapi-yaml": "dist/cli.js"
