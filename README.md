@@ -34,6 +34,8 @@ example: Example
 
 `@` Is used as a special character in this library.
 
+`@` is replaced by `/`.
+
 `file structure`
 - A
     - @B
@@ -53,6 +55,53 @@ example: Example
         example: 'Example'
       }  
     }  
+  }
+}
+```
+
+`_` Is used as a special character in this library.
+
+
+File or folder names starting with `_` are ignored.
+
+`file structure`
+- A
+    - _B
+        - C.yml
+
+`C.yml`
+```yaml
+example: Example
+```
+
+`output $dir`
+```javascript
+{
+  A: {
+    C: {
+      example: 'Example'
+    }   
+  }
+}
+```
+
+`file structure`
+- A
+    - B
+        - _C.yml
+
+`C.yml`
+```yaml
+example: Example
+```
+
+`output $dir`
+```javascript
+{
+  A: {
+    B: {
+      example: 'Example'
+    }   
   }
 }
 ```
